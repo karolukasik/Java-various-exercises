@@ -6,6 +6,10 @@ public class BubbleSort<T extends Comparable<T>> extends SortingAlgorithm<T> {
 
     @Override
     void sort(List<T> list) {
+        if(list.size() <=1 || list.isEmpty()){
+            return;
+        }
+        
         boolean wasSwapped;
         T firstValue;
         T secondValue;

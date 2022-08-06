@@ -7,7 +7,7 @@ public class SelectionSort<T extends Comparable<T>> extends SortingAlgorithm<T> 
     @Override
     void sort(List<T> list) {
 
-        if (list.size() > 1) {
+        if (list.size() > 1 && !list.isEmpty()) {
             T currentMin;
             T comparedValue;
             int indexOfMin;
