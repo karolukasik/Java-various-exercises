@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class SortingAlgorithms {
     public static void main(String[] args) {
-        SelectionSort<Integer> selectionSorter = new SelectionSort<>();
+        BubbleSort<Integer> bubbleSorter = new BubbleSort<>();
         ArrayList<Integer> list = new ArrayList<>();
         Random rnd = new Random();
 
@@ -15,7 +15,7 @@ public class SortingAlgorithms {
 
         System.out.println(list);
 
-        selectionSorter.sort(list);
+        bubbleSorter.sort(list);
         System.out.println(list);
 
     }
