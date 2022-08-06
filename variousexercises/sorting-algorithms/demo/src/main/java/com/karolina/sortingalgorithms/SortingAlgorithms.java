@@ -3,23 +3,20 @@ package com.karolina.sortingalgorithms;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Hello world!
- *
- */
 public class SortingAlgorithms {
     public static void main(String[] args) {
-        SelectionSort<Integer> selectionSorter = new SelectionSort<>();
+        InsertionSort<Integer> insertionSorter = new InsertionSort<>();
         ArrayList<Integer> list = new ArrayList<>();
         Random rnd = new Random();
 
-        for (int i = 0; i < 10; i++) {
-            list.add(rnd.nextInt(20));
+        for (int i = 0; i < 20; i++) {
+        list.add(rnd.nextInt(20));
         }
+
 
         System.out.println(list);
 
-        selectionSorter.sort(list);
+        insertionSorter.sort(list);
         System.out.println(list);
 
     }
