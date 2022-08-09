@@ -4,19 +4,18 @@ import java.util.List;
 
 public abstract class SortingAlgorithm<T extends Comparable<T>> {
 
-    public List<T> list;
+    public abstract void sort(List<T> list);
 
-    abstract void sort(List<T> list);
-
-    public long checkSortingTime(SortingAlgorithm<Integer> sorter, List<Integer> list) {
+    private long getSortingTime(List<T> list) {
         long sortStartTime = System.nanoTime();
-        sorter.sort(list);
+        this.sort(list);
         long sortElapsedTime = System.nanoTime() - sortStartTime;
 
         return sortElapsedTime;
     }
 
-    public void printSortingTime(SortingAlgorithm<Integer> sorter, List<Integer> list) {
-        System.out.println("Quick sorting took " + checkSortingTime(sorter, list) / 1000000 + " milliseconds");
+    public void printSortingTime(List<T> list) {
+        System.out.println(this.getClass().getSimpleName() + " algorithm took " + getSortingTime(list) / 1000000
+                + " milliseconds");
     }
 }

@@ -6,11 +6,11 @@ import java.util.Random;
 public class QuickSort<T extends Comparable<T>> extends SortingAlgorithm<T> {
 
     @Override
-    void sort(List<T> list) {
+    public void sort(List<T> list) {
         sort(list, 0, list.size() - 1);
     }
 
-    void sort(List<T> list, int bottomIndex, int upperIndex) {
+    private void sort(List<T> list, int bottomIndex, int upperIndex) {
         if (bottomIndex >= upperIndex) {
             return;
         }
