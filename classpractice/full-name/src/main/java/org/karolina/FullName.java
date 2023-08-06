@@ -47,7 +47,7 @@ public class FullName {
     private String processSurname (String surname) {
         var trimmedSurname = surname.toLowerCase().trim();
         checkSurnameCorrectness(trimmedSurname);
-        return formattedSurname(surname, "-");
+        return formattedSurname(trimmedSurname, "-");
     }
 
     private void checkSurnameCorrectness (String surname) {
